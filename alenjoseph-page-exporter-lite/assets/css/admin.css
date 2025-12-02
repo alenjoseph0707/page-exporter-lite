@@ -1,0 +1,60 @@
+/* Page Exporter Lite Admin Styles */
+
+.pel-export-link {
+  color: #0073aa;
+  text-decoration: none;
+}
+
+.pel-export-link:hover {
+  color: #005177;
+}
+
+.pel-export-link:focus {
+  box-shadow: 0 0 0 2px #0073aa;
+  outline: none;
+}
+
+/* Loading state */
+.pel-export-link.loading {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.pel-export-link.loading::after {
+  content: " ⏳";
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+/* Success feedback */
+.pel-export-success {
+  color: #46b450;
+  font-weight: bold;
+}
+
+.pel-export-success::before {
+  content: "✓ ";
+}
+
+/* Error feedback */
+.pel-export-error {
+  color: #dc3232;
+  font-weight: bold;
+}
+
+.pel-export-error::before {
+  content: "✗ ";
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 782px) {
+  .pel-export-link {
+      display: block;
+      margin: 5px 0;
+  }
+}
